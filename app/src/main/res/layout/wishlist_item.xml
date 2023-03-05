@@ -11,24 +11,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:hint="Item Name"
-        android:padding="5dp"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/itemPriceView"
-        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/itemLocationView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="137dp"
+        android:layout_height="37dp"
         android:layout_marginBottom="28dp"
         android:hint="Item Location"
-        android:padding="5dp"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/itemNameView"
         app:layout_constraintVertical_bias="1.0" />
@@ -38,12 +36,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Item Price"
-        android:padding="5dp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26" />
+        app:layout_constraintVertical_bias="0.269" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
