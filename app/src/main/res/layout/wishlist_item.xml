@@ -21,13 +21,13 @@
 
     <EditText
         android:id="@+id/itemLocationView"
-        android:layout_width="96dp"
-        android:layout_height="39dp"
+        android:layout_width="247dp"
+        android:layout_height="30dp"
         android:layout_marginBottom="28dp"
         android:background="@null"
         android:hint="Item Location"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="15sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
