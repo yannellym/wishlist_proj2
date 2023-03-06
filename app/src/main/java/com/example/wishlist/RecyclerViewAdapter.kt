@@ -13,6 +13,7 @@ class RecyclerViewAdapter(private val wishlistItems: MutableList<WishlistItem>) 
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        // declares the textViews
         val itemNameTextView: TextView = itemView.findViewById(R.id.itemNameView)
         val itemPriceTextView: TextView  = itemView.findViewById(R.id.itemPriceView)
         val itemLocationTextView: TextView  = itemView.findViewById(R.id.itemLocationView)
@@ -20,7 +21,7 @@ class RecyclerViewAdapter(private val wishlistItems: MutableList<WishlistItem>) 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-
+        // refers to the parent
         val context = parent.context
         val inflater = LayoutInflater.from(context)
         // Inflate the custom layout
@@ -40,6 +41,7 @@ class RecyclerViewAdapter(private val wishlistItems: MutableList<WishlistItem>) 
         // adds a long click listener to the items above.
         // When the user does a long click, it removes it for them
         // it notifies the recycler view of the item removed
+        // https://workingdev.net/android,/kotlin/2018/08/01/handling-clicks-and-long-clicks.html
         holder.itemView.setOnLongClickListener {
             wishlistItems.removeAt(position)
             notifyItemRemoved(position)
@@ -49,6 +51,9 @@ class RecyclerViewAdapter(private val wishlistItems: MutableList<WishlistItem>) 
         // Add a click listener to the item location text view
         holder.itemLocationTextView.setOnClickListener {
             // Create an intent to view the item location link
+            // It is basically a passive data structure holding an abstract description of an action to be performed.
+            // https://developer.android.com/reference/kotlin/android/content/Intent
+            // https://www.javatpoint.com/kotlin-android-explicit-intent
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(item.location)
             // Launch the intent
